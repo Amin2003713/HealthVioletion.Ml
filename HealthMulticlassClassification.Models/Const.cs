@@ -6,8 +6,11 @@ public static class Const
 {
     public static string Input { get; set; } = Path.Combine(
         new DirectoryInfo(Environment.CurrentDirectory).Parent!.Parent!.Parent!.FullName, "Data" , "RestaurantScores.tsv");
-    public static string Output { get; set; } = @"\Data\";
-    public static string TrainedZip { get; set; } = @"\Model\";
+    public static string Output { get; set; } = Path.Combine(
+        new DirectoryInfo(Environment.CurrentDirectory).Parent!.Parent!.Parent!.FullName, "Model");
+    public static string TrainedZip { get; set; } = Path.Combine(
+        new DirectoryInfo(Environment.CurrentDirectory).Parent!.Parent!.Parent!.FullName, "Data",
+        "RestaurantScores.tsv");
 }
 
 

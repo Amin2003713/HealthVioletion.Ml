@@ -5,4 +5,4 @@ using HealthMulticlassClassification.Trainer;
 Console.WriteLine("Hello, World!");
 
 
-BestModelFinder.FindBestModel();
+BestModelFinder.TrainAndSaveBestModel();
