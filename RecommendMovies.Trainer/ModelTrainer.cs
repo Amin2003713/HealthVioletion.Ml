@@ -1,24 +1,65 @@
 using Microsoft.ML;
 using Microsoft.ML.Trainers;
+using RecommendMovies.Models;
+
 // ReSharper disable InconsistentNaming
 
 namespace RecommendMovies.Trainer;
 
 public static class ModelTrainer
 {
+
+
+    public static void SaveModel(MLContext mlContext , ITransformer model , DataViewSchema schema)
+    {
+       mlContext.Model.Save(model , schema , Const.GetModelZipPath());
+    }
+
+    public static void UseModelSinglePrediction(MLContext mlContext, ITransformer model)
+    {
+        // Create a PredictionEngine to make a single prediction
+        var predictionEngine = mlContext.Model.CreatePredictionEngine<Input, Output>(model);
+        Console.WriteLine(" Prediction engine created successfully.");
+
+        // Define a sample input for testing
+        var inputTest = new Input
+        {
+            UserId = 14,
+            MovieId = 2683
+        };
+
+        Console.WriteLine(" Testing prediction for input:");
+        Console.WriteLine($"   - UserId: {inputTest.UserId}");
+        Console.WriteLine($"   - MovieId: {inputTest.MovieId}\n");
+
+// Perform the prediction
+        var prediction = predictionEngine.Predict(inputTest);
+
+        Console.WriteLine("======================================");
+        Console.WriteLine(" Prediction Result:");
+        Console.WriteLine("======================================");
+        Console.WriteLine($"   - Predicted Label (Rating): {prediction.Label}");
+        Console.WriteLine($"   - Confidence Score: {prediction.Score:N2}");
+        Console.WriteLine("======================================\n");
+
+        Console.WriteLine(Math.Round(prediction.Score) >= 3.5F
+            ? $"  {inputTest.MovieId} - Good choose! for user {inputTest.UserId}"
+            : $"  {inputTest.MovieId} - Bad choose! for user {inputTest.UserId}");
+    }
+
     public static ITransformer BuildAndTrainMode(MLContext mlContext, IDataView trainingDataView)
     {
         var trainerEstimator = mlContext.Transforms.Conversion
-            .MapValueToKey(outputColumnName: "userIdEncoded", inputColumnName: "userId")
+            .MapValueToKey(outputColumnName: "UserIdEncoded", inputColumnName: "UserId")
             .Append(mlContext.Transforms.Conversion
-                .MapValueToKey(outputColumnName: "movieIdEncoded", inputColumnName: "movieId"))
+                .MapValueToKey(outputColumnName: "MovieIdEncoded", inputColumnName: "MovieId"))
             .Append(mlContext.Recommendation().Trainers.MatrixFactorization(
                 new MatrixFactorizationTrainer.Options()
                 {
-                    MatrixColumnIndexColumnName = "userIdEncoded",
-                    MatrixRowIndexColumnName = "movieIdEncoded",
+                    MatrixColumnIndexColumnName = "UserIdEncoded",
+                    MatrixRowIndexColumnName = "MovieIdEncoded",
                     LabelColumnName = "Label",
-                    NumberOfIterations = 50,
+                    NumberOfIterations = 500,
                     ApproximationRank = 100,
                     NumberOfThreads = 3,
                 }));
@@ -31,30 +72,29 @@ public static class ModelTrainer
     public static void Evaluate(MLContext mlContext, IDataView testDataView, ITransformer model)
     {
         Console.WriteLine("======================================");
-        Console.WriteLine("🔍 Starting Model Evaluation");
+        Console.WriteLine("\t Starting Model Evaluation");
         Console.WriteLine("======================================\n");
 
         // Generate predictions for the test data
         var predictions = model.Transform(testDataView);
-        Console.WriteLine("📊 Predictions generated for test data.");
+        Console.WriteLine("\t Predictions generated for test data.");
 
         // Evaluate the predictions using regression metrics
         var metrics = mlContext.Regression.Evaluate(predictions, labelColumnName: "Label", scoreColumnName: "Score");
-        Console.WriteLine("📈 Evaluation metrics calculated.\n");
+        Console.WriteLine("\t Evaluation metrics calculated.\n");
 
         // Display evaluation results in a formatted table
         Console.WriteLine("=============== Evaluation Results ===============");
-        Console.WriteLine($"| {"Metric",-25} | {"Value",-15} |");
+        Console.WriteLine("| Metric | Value |");
         Console.WriteLine("-------------------------------------------------");
-        Console.WriteLine($"| {"Root Mean Squared Error (RMSE)",-25} | {metrics.RootMeanSquaredError:N2,-15} |");
-        Console.WriteLine($"| {"R Squared (R²)",-25}               | {metrics.RSquared:N2,-15} |");
-        Console.WriteLine($"| {"Mean Absolute Error (MAE)",-25}    | {metrics.MeanAbsoluteError:N2,-15} |");
-        Console.WriteLine($"| {"Loss Function",-25}                | {metrics.LossFunction:N2,-15} |");
-        Console.WriteLine($"| {"Mean Squared Error (MSE)",-25}     | {metrics.MeanSquaredError:N2,-15} |");
+        Console.WriteLine($"| Rot Men Squared Error (RMSE) | {metrics.RootMeanSquaredError:##.####} |");
+        Console.WriteLine($"| R Squared (R\u00b2)               | {metrics.RSquared:##.####} |");
+        Console.WriteLine($"| Mean Absolute Error (MAE)    | {metrics.MeanAbsoluteError:##.####} |");
+        Console.WriteLine($"| Loss Function                | {metrics.LossFunction:##.####} |");
+        Console.WriteLine($"| Mean Squared Error (MSE)     | {metrics.MeanSquaredError:##.####} |");
         Console.WriteLine("=================================================\n");
 
-        Console.WriteLine("✅ Model evaluation completed successfully.\n");
-        Evaluate(mlContext, testDataView, model);
+        Console.WriteLine("\t Model evaluation completed successfully.\n");
     }
 
 }

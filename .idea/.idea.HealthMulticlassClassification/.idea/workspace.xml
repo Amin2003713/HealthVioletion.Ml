@@ -9,18 +9,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="95e67559-2dac-4b8d-8c5f-8cea46d21961" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/RecommendMovies.Models/Input.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RecommendMovies.Models/Output.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RecommendMovies.Trainer/Data/recommendation-movies.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RecommendMovies.Trainer/Data/recommendation-ratings-test.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RecommendMovies.Trainer/Data/recommendation-ratings-train.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RecommendMovies.Trainer/ModelTrainer.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.HealthMulticlassClassification/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.HealthMulticlassClassification/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Ml.sln.DotSettings.user" beforeDir="false" afterPath="$PROJECT_DIR$/Ml.sln.DotSettings.user" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/RecommendMovies.Models/Const.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RecommendMovies.Models/Const.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RecommendMovies.Models/Movie.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RecommendMovies.Models/Movie.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RecommendMovies.Models/MovieRating.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/RecommendMovies.Models/MovieRatingPrediction.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RecommendMovies.Models/Output.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RecommendMovies.Models/Output.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RecommendMovies.Trainer/ModelTrainer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RecommendMovies.Trainer/ModelTrainer.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/RecommendMovies.Trainer/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RecommendMovies.Trainer/Program.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/RecommendMovies.Trainer/RecommendMovies.Trainer.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/RecommendMovies.Trainer/RecommendMovies.Trainer.csproj" afterDir="false" />
     </list>
@@ -53,13 +46,16 @@
     </option>
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$USER_HOME$/AppData/Local/Temp/Rar$DIa2984.32233.rartemp/MovieRating.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$USER_HOME$/AppData/Local/Temp/Rar$DIa2984.32485.rartemp/MovieRating.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/AppData/Local/Temp/0b0809cd-7927-478b-9476-132d149d5732_Recommendation_Ratings_Train_Dataset.zip.732/TransformerChain/Transform_001/Vocabulary/Terms.txt" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/AppData/Local/Temp/4a0bc2db-7693-4731-b5aa-f7413afc1dd9_Recommendation_Ratings_Train_Dataset.zip.dd9/TrainingInfo/Version.txt" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/AppData/Local/Temp/57b492f0-6306-478e-9917-49affffe1599_Recommendation_Ratings_Train_Dataset.zip.599/TransformerChain/Transform_000/Vocabulary/Terms.txt" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/AppData/Local/Temp/Rar$DRa2984.31872.rartemp/MovieRecommenderProject/MovieRecommenderProject/Model/MovieRating.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/AppData/Local/Temp/Rar$DRa2984.31872.rartemp/MovieRecommenderProject/MovieRecommenderProject/Model/MovieRatingPrediction.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/AppData/Local/Temp/Rar$DRa2984.46811.rartemp/MovieRecommenderProject/MovieRecommenderProject/Program.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/AppData/Local/Temp/Rar$DRa2984.48883.rartemp/MovieRecommenderProject/MovieRecommenderProject/Program.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/AppData/Local/Temp/Rar$DRa2984.5564.rartemp/MovieRecommenderProject/MovieRecommenderProject/Program.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/0916d17f52004633a3b8b4afaa508f70e8e8a0/4b/801d301a/StackFrameIterator.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/094d79cb36ef48bb8aea91b64af7f15d17e2a0/8b/14bdd2c4/PredictionEngineBase`2.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/Downloads/Compressed/S4-E1_prepare-movie-recommender-project-with-mlnet/MovieRecommenderProject/Model/MovieRatingPrediction.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/Downloads/Compressed/S4-E1_prepare-movie-recommender-project-with-mlnet/MovieRecommenderProject/Program.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://E:/Lerning/HealthVioletion.Ml/HealthMulticlassClassification.Models/Const.cs" root0="SKIP_HIGHLIGHTING" />
@@ -108,11 +104,11 @@
       </method>
     </configuration>
     <configuration name="RecommendMovies.Trainer" type="DotNetProject" factoryName=".NET Project">
-      <option name="EXE_PATH" value="" />
+      <option name="EXE_PATH" value="$PROJECT_DIR$/RecommendMovies.Trainer/bin/Debug/net9.0/RecommendMovies.Trainer.exe" />
       <option name="PROGRAM_PARAMETERS" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/RecommendMovies.Trainer/bin/Debug/net9.0" />
       <option name="PASS_PARENT_ENVS" value="1" />
-      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <option name="USE_EXTERNAL_CONSOLE" value="1" />
       <option name="USE_MONO" value="0" />
       <option name="RUNTIME_ARGUMENTS" value="" />
       <option name="PROJECT_PATH" value="$PROJECT_DIR$/RecommendMovies.Trainer/RecommendMovies.Trainer.csproj" />
@@ -120,11 +116,15 @@
       <option name="PROJECT_ARGUMENTS_TRACKING" value="1" />
       <option name="PROJECT_WORKING_DIRECTORY_TRACKING" value="1" />
       <option name="PROJECT_KIND" value="DotNetCore" />
-      <option name="PROJECT_TFM" value="" />
+      <option name="PROJECT_TFM" value="net9.0" />
       <method v="2">
         <option name="Build" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue=".NET Project.HealthMulticlassClassification.Trainer" />
+      <item itemvalue=".NET Project.RecommendMovies.Trainer" />
+    </list>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -135,7 +135,7 @@
       <option name="presentableId" value="Default" />
       <updated>1731303583061</updated>
       <workItem from="1731303585528" duration="3626000" />
-      <workItem from="1731319662149" duration="7242000" />
+      <workItem from="1731319662149" duration="10178000" />
     </task>
     <task id="LOCAL-00001" summary="xcvb">
       <option name="closed" value="true" />
@@ -161,7 +161,15 @@
       <option name="project" value="LOCAL" />
       <updated>1731321596712</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="sdad">
+      <option name="closed" value="true" />
+      <created>1731329790955</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1731329790955</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -183,6 +191,7 @@
     <MESSAGE value="xcvb" />
     <MESSAGE value="jkn" />
     <MESSAGE value="شسیشسیسشی" />
-    <option name="LAST_COMMIT_MESSAGE" value="شسیشسیسشی" />
+    <MESSAGE value="sdad" />
+    <option name="LAST_COMMIT_MESSAGE" value="sdad" />
   </component>
 </project>

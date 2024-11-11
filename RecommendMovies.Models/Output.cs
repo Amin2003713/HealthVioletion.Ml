@@ -1,6 +1,6 @@
 ﻿namespace RecommendMovies.Models;
 
-class Output
+public class Output
 {
     public float Label;
 

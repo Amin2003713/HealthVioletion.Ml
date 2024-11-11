@@ -17,4 +17,5 @@ public static class Const
 
     public static string GetTestPath() => Path.Combine(Input, Recommendation_Ratings_Test_Dataset);
     public static string GetTrainPath() => Path.Combine(Input, Recommendation_Ratings_Train_Dataset);
+    public static string GetModelZipPath() => Path.Combine(Output, "Recommendation_Ratings_Train_Dataset.zip");
 }
