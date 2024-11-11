@@ -1,5 +1,5 @@
-namespace HealthMulticlassClassification.Models;
-
+// ReSharper disable InconsistentNaming
+namespace RecommendMovies.Models;
 public static class Const
 {
     public static string Input { get; set; } = Path.Combine(
@@ -10,6 +10,11 @@ public static class Const
         new DirectoryInfo(Environment.CurrentDirectory).Parent!.Parent!.Parent!.FullName, "Data",
         "RestaurantScores.tsv");
 
-    public static string Dataset { get; set; } = "RestaurantScores.tsv";
-    public static string ImbalanceDataset { get; set; } = "ImbalanceDataset";
+    public static string Recommendation_Movies_Dataset { get; set; } = "recommendation-movies.csv";
+    public static string Recommendation_Ratings_Test_Dataset { get; set; } = "recommendation-ratings-test.csv";
+    public static string Recommendation_Ratings_Train_Dataset { get; set; } = "recommendation-ratings-train.csv";
+
+
+    public static string GetTestPath() => Path.Combine(Input, Recommendation_Ratings_Test_Dataset);
+    public static string GetTrainPath() => Path.Combine(Input, Recommendation_Ratings_Train_Dataset);
 }

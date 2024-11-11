@@ -1,4 +1,4 @@
-﻿namespace MovieRecommender;
+﻿namespace RecommendMovies.Models;
 
 internal class Movie
 {
