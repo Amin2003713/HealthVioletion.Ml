@@ -11,11 +11,15 @@ public static class ModelTrainer
 
     public static void TrainImbalanceDataset()
     {
+        Console.WriteLine("creating Imbalance Dataset...");
+
+        CreateImbalanceDataset(Path.Combine(Const.Input, Const.Dataset) , Path.Combine(Const.Input, Const.ImbalanceDataset));
+
     Console.WriteLine("Starting best model finder ......");
         var mlContext = new MLContext();
 
         Console.WriteLine("Loading model ...");
-        var trainingDataView = mlContext.Data.LoadFromTextFile<Input>(Const.Input, hasHeader: true,
+        var trainingDataView = mlContext.Data.LoadFromTextFile<Input>(Path.Combine(Const.Input , Const.ImbalanceDataset), hasHeader: true,
             separatorChar: '\t', allowQuoting: true);
 
         Console.WriteLine("Training PipeLine ...>  preprocessingPipeline ..");
@@ -122,7 +126,7 @@ public static class ModelTrainer
         var mlContext = new MLContext();
 
         Console.WriteLine("Loading model ...");
-        var trainingDataView = mlContext.Data.LoadFromTextFile<Input>(Const.Input, hasHeader: true,
+        var trainingDataView = mlContext.Data.LoadFromTextFile<Input>(Path.Combine(Const.Input, Const.Dataset), hasHeader: true,
             separatorChar: '\t', allowQuoting: true);
 
         Console.WriteLine("Training PipeLine ...>  preprocessingPipeline ..");
@@ -180,7 +184,7 @@ public static class ModelTrainer
         var mlContext = new MLContext();
 
         Console.WriteLine("Loading model ...");
-        var trainingDataView = mlContext.Data.LoadFromTextFile<Input>(Const.Input, hasHeader: true,
+        var trainingDataView = mlContext.Data.LoadFromTextFile<Input>(Path.Combine(Const.Input, Const.Dataset), hasHeader: true,
             separatorChar: '\t', allowQuoting: true);
 
         Console.WriteLine("Training PipeLine data ...  preprocessingPipeline ..");

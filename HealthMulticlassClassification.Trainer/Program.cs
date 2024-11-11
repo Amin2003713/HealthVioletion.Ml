@@ -6,3 +6,7 @@ Console.WriteLine("Hello, World!");
 
 
 ModelTrainer.TrainAndSaveBestModel();
+
+Console.WriteLine("------------------------   imbalance dataset ----------------------");
+
+ModelTrainer.TrainImbalanceDataset();
