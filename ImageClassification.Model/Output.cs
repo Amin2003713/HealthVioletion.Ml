@@ -2,7 +2,15 @@
 
 public class Output
 {
-    public float Label;
+    public string? ImagePath { get; set; }
+    public string? Label { get; set; }
+    public string? PredictedLabel { get; set; }
+}
 
-    public float Score;
+
+public class ImageData
+{
+    public string? ImagePath { get; set; }
+    public string? Label { get; set; }
+
 }

@@ -4,15 +4,8 @@ namespace ImageClassification.Model;
 
 public class Input
 {
-    [LoadColumn(0)]
-    public float UserId;
-
-    [LoadColumn(1)]
-    public float MovieId;
-
-    [LoadColumn(2)]
-    public float Label;
-        
-    [LoadColumn(3)]
-    public float Timestamp;
+    public byte[]? Image { get; set; }
+    public uint LabelAsKey { get; set; }
+    public string? ImagePath { get; set; }
+    public string? Label { get; set; }
 }
