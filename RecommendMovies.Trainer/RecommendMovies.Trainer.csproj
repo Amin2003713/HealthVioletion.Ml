@@ -20,4 +20,8 @@
       <Folder Include="Model\" />
     </ItemGroup>
 
+    <ItemGroup>
+      <None Remove="Model\Recommendation_Ratings_Train_Dataset.zip" />
+    </ItemGroup>
+
 </Project>

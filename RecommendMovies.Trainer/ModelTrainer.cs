@@ -59,9 +59,9 @@ public static class ModelTrainer
                     MatrixColumnIndexColumnName = "UserIdEncoded",
                     MatrixRowIndexColumnName = "MovieIdEncoded",
                     LabelColumnName = "Label",
-                    NumberOfIterations = 500,
-                    ApproximationRank = 100,
-                    NumberOfThreads = 3,
+                    NumberOfIterations = 1000,
+                    ApproximationRank = 0,
+                    NumberOfThreads = 4
                 }));
            
 
