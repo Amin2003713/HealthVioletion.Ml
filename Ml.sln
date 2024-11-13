@@ -12,6 +12,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RecommendMovies.Trainer", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RecommendMovies.Models", "RecommendMovies.Models\RecommendMovies.Models.csproj", "{6D6C146F-89E4-4911-8130-1BDAADC797DE}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ImageClassification", "ImageClassification", "{203EDCA1-9DBA-45DF-8AC3-A2C3461678BA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImageClassification.Model", "ImageClassification.Model\ImageClassification.Model.csproj", "{41EA7FA9-21BA-47FD-AF0B-CF9D597A4F45}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -34,11 +38,16 @@ Global
 		{6D6C146F-89E4-4911-8130-1BDAADC797DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6D6C146F-89E4-4911-8130-1BDAADC797DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6D6C146F-89E4-4911-8130-1BDAADC797DE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{41EA7FA9-21BA-47FD-AF0B-CF9D597A4F45}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{41EA7FA9-21BA-47FD-AF0B-CF9D597A4F45}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{41EA7FA9-21BA-47FD-AF0B-CF9D597A4F45}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{41EA7FA9-21BA-47FD-AF0B-CF9D597A4F45}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{40C545CE-B7D8-4A0C-B869-A1401D146E77} = {3197EB72-CA3C-4983-BE74-8A5EC7EE13E3}
 		{F1526D50-F994-461D-9910-F5308C848D1F} = {3197EB72-CA3C-4983-BE74-8A5EC7EE13E3}
 		{1ABF4EB5-70AC-419A-B403-4C6EC161DB0A} = {ED94666A-1FF3-4E74-A481-D2944FA631A5}
 		{6D6C146F-89E4-4911-8130-1BDAADC797DE} = {ED94666A-1FF3-4E74-A481-D2944FA631A5}
+		{41EA7FA9-21BA-47FD-AF0B-CF9D597A4F45} = {203EDCA1-9DBA-45DF-8AC3-A2C3461678BA}
 	EndGlobalSection
 EndGlobal
